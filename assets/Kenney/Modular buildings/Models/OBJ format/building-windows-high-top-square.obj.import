@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bu0idgrlbmpav"
+path="res://.godot/imported/building-windows-high-top-square.obj-53069c4006ca895dfd419e16dd8a07ca.mesh"
+
+[deps]
+
+files=["res://.godot/imported/building-windows-high-top-square.obj-53069c4006ca895dfd419e16dd8a07ca.mesh"]
+
+source_file="res://assets/Kenney/Modular buildings/Models/OBJ format/building-windows-high-top-square.obj"
+dest_files=["res://.godot/imported/building-windows-high-top-square.obj-53069c4006ca895dfd419e16dd8a07ca.mesh", "res://.godot/imported/building-windows-high-top-square.obj-53069c4006ca895dfd419e16dd8a07ca.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
