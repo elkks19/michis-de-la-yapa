@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgcnaaxhy2jrf"
+path="res://.godot/imported/track-road-narrow-curve.obj-1ed7f372e71a79d4f77c865a38ce314f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/track-road-narrow-curve.obj-1ed7f372e71a79d4f77c865a38ce314f.mesh"]
+
+source_file="res://assets/Kenney/Toy car/Models/OBJ format/track-road-narrow-curve.obj"
+dest_files=["res://.godot/imported/track-road-narrow-curve.obj-1ed7f372e71a79d4f77c865a38ce314f.mesh", "res://.godot/imported/track-road-narrow-curve.obj-1ed7f372e71a79d4f77c865a38ce314f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

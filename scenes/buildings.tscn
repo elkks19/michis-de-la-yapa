@@ -1,0 +1,241 @@
+[gd_scene load_steps=80 format=3 uid="uid://ekpy8qy42hi"]
+
+[ext_resource type="PackedScene" uid="uid://b4eeuhy6oh7ii" path="res://assets/Kenney/Building kit/Models/GLB format/barricade-doorway-a.glb" id="1_jlqvh"]
+[ext_resource type="PackedScene" uid="uid://de447mvc7u8j" path="res://assets/Kenney/Building kit/Models/GLB format/barricade-doorway-b.glb" id="2_m4u0u"]
+[ext_resource type="PackedScene" uid="uid://bgxqe11tolgws" path="res://assets/Kenney/Building kit/Models/GLB format/barricade-doorway-c.glb" id="3_rpth0"]
+[ext_resource type="PackedScene" uid="uid://bk5i3uuyg3iph" path="res://assets/Kenney/Building kit/Models/GLB format/barricade-window-a.glb" id="4_paqtd"]
+[ext_resource type="PackedScene" uid="uid://bre4q05qxsmxn" path="res://assets/Kenney/Building kit/Models/GLB format/barricade-window-b.glb" id="5_702kw"]
+[ext_resource type="PackedScene" uid="uid://b7sxhwr0o7hor" path="res://assets/Kenney/Building kit/Models/GLB format/barricade-window-c.glb" id="6_xopu2"]
+[ext_resource type="PackedScene" uid="uid://gd54mujgqhx2" path="res://assets/Kenney/Building kit/Models/GLB format/border-corner-diagonal.glb" id="7_l2ia8"]
+[ext_resource type="PackedScene" uid="uid://cbj27gx7hhvy4" path="res://assets/Kenney/Building kit/Models/GLB format/border-corner-round.glb" id="8_mqrxx"]
+[ext_resource type="PackedScene" uid="uid://bvqfol3ipixsn" path="res://assets/Kenney/Building kit/Models/GLB format/border-corner-small.glb" id="9_srd1x"]
+[ext_resource type="PackedScene" uid="uid://44djhxw6aeyy" path="res://assets/Kenney/Building kit/Models/GLB format/border-corner.glb" id="10_tvogk"]
+[ext_resource type="PackedScene" uid="uid://bqvtriuywlxhu" path="res://assets/Kenney/Building kit/Models/GLB format/border-high-corner-diagonal.glb" id="11_bjy83"]
+[ext_resource type="PackedScene" uid="uid://efga0o0gyteq" path="res://assets/Kenney/Building kit/Models/GLB format/border-high-corner-round.glb" id="12_2rofj"]
+[ext_resource type="PackedScene" uid="uid://dgd8gafop64bj" path="res://assets/Kenney/Building kit/Models/GLB format/border-high-corner-small.glb" id="13_mlk3y"]
+[ext_resource type="PackedScene" uid="uid://r5hihah56nnh" path="res://assets/Kenney/Building kit/Models/GLB format/border-high-corner.glb" id="14_mlljf"]
+[ext_resource type="PackedScene" uid="uid://dvavxwqfbdpbs" path="res://assets/Kenney/Building kit/Models/GLB format/border-high.glb" id="15_ecbut"]
+[ext_resource type="PackedScene" uid="uid://cguqf3j3hm828" path="res://assets/Kenney/Building kit/Models/GLB format/border.glb" id="16_dqk34"]
+[ext_resource type="PackedScene" uid="uid://1ryk82ng02ju" path="res://assets/Kenney/Building kit/Models/GLB format/column-thin.glb" id="17_si366"]
+[ext_resource type="PackedScene" uid="uid://cmfxvju3a4ooe" path="res://assets/Kenney/Building kit/Models/GLB format/column-wide.glb" id="18_rqisn"]
+[ext_resource type="PackedScene" uid="uid://sdrtu03wpenj" path="res://assets/Kenney/Building kit/Models/GLB format/column.glb" id="19_efvqa"]
+[ext_resource type="PackedScene" uid="uid://b600ra1145050" path="res://assets/Kenney/Building kit/Models/GLB format/detail-pipe.glb" id="20_1ppke"]
+[ext_resource type="PackedScene" uid="uid://d1x8ntqdydmm6" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-round-a.glb" id="21_wouyj"]
+[ext_resource type="PackedScene" uid="uid://h57fnvgweiuc" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-round-b.glb" id="22_xy615"]
+[ext_resource type="PackedScene" uid="uid://bxecci3j2fhay" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-round-c.glb" id="23_pqnkr"]
+[ext_resource type="PackedScene" uid="uid://w02k6r36qdbi" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-round-d.glb" id="24_0mb38"]
+[ext_resource type="PackedScene" uid="uid://bk6ipi48ugk5e" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-square-a.glb" id="25_yaert"]
+[ext_resource type="PackedScene" uid="uid://0fstnnfyflih" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-square-b.glb" id="26_bfoi2"]
+[ext_resource type="PackedScene" uid="uid://b5upb71rsbjkv" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-square-c.glb" id="27_6mlh7"]
+[ext_resource type="PackedScene" uid="uid://dljeslpgd1cbg" path="res://assets/Kenney/Building kit/Models/GLB format/door-rotate-square-d.glb" id="28_aqyy1"]
+[ext_resource type="PackedScene" uid="uid://dvemhn1prwbvh" path="res://assets/Kenney/Building kit/Models/GLB format/floor-corner-diagonal.glb" id="29_ya26t"]
+[ext_resource type="PackedScene" uid="uid://caaj8go06bkvm" path="res://assets/Kenney/Building kit/Models/GLB format/floor-corner-round.glb" id="30_i2hn6"]
+[ext_resource type="PackedScene" uid="uid://bc5nigahrnwhh" path="res://assets/Kenney/Building kit/Models/GLB format/floor-half.glb" id="31_comim"]
+[ext_resource type="PackedScene" uid="uid://d17dt1y3572sb" path="res://assets/Kenney/Building kit/Models/GLB format/floor-quarter.glb" id="32_ycpr2"]
+[ext_resource type="PackedScene" uid="uid://dagu15xfusqae" path="res://assets/Kenney/Building kit/Models/GLB format/floor.glb" id="33_pwiug"]
+[ext_resource type="PackedScene" uid="uid://dbuii16xhwy4y" path="res://assets/Kenney/Building kit/Models/GLB format/gutter-vertical-bottom.glb" id="34_moi7w"]
+[ext_resource type="PackedScene" uid="uid://c85aqwclkd14" path="res://assets/Kenney/Building kit/Models/GLB format/gutter-vertical-short.glb" id="35_05tuv"]
+[ext_resource type="PackedScene" uid="uid://cmufwiext1qsf" path="res://assets/Kenney/Building kit/Models/GLB format/gutter-vertical-top.glb" id="36_yk3ia"]
+[ext_resource type="PackedScene" uid="uid://b6kbr1i4vmv3h" path="res://assets/Kenney/Building kit/Models/GLB format/gutter-vertical-wall.glb" id="37_sorp1"]
+[ext_resource type="PackedScene" uid="uid://cekjwdqqnon4b" path="res://assets/Kenney/Building kit/Models/GLB format/gutter-vertical.glb" id="38_2218b"]
+[ext_resource type="PackedScene" uid="uid://cnhr2a83uxcr6" path="res://assets/Kenney/Building kit/Models/GLB format/plating-detailed-wide.glb" id="39_570y4"]
+[ext_resource type="PackedScene" uid="uid://ehqrfmj7o6ms" path="res://assets/Kenney/Building kit/Models/GLB format/plating-detailed.glb" id="40_ysn3b"]
+[ext_resource type="PackedScene" uid="uid://dv6ga7a4ugb74" path="res://assets/Kenney/Building kit/Models/GLB format/plating-wide.glb" id="41_cswxo"]
+[ext_resource type="PackedScene" uid="uid://bhwwfrm4kmo7d" path="res://assets/Kenney/Building kit/Models/GLB format/plating.glb" id="42_crf6b"]
+[ext_resource type="PackedScene" uid="uid://cahnt4jmaikni" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-center.glb" id="43_pj83c"]
+[ext_resource type="PackedScene" uid="uid://clni2x3yr0mj6" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-corner-inner.glb" id="44_t12bt"]
+[ext_resource type="PackedScene" uid="uid://daccal673lagc" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-corner.glb" id="45_xi8xx"]
+[ext_resource type="PackedScene" uid="uid://d3iyp1mmif2ir" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-patch-large.glb" id="46_w1kty"]
+[ext_resource type="PackedScene" uid="uid://dx0rgcth75vfx" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-patch.glb" id="47_4tub8"]
+[ext_resource type="PackedScene" uid="uid://bi6ucjmqm5bi0" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-side.glb" id="48_qxikk"]
+[ext_resource type="PackedScene" uid="uid://c82oen04ix362" path="res://assets/Kenney/Building kit/Models/GLB format/roof-flat-square.glb" id="49_5eb1p"]
+[ext_resource type="PackedScene" uid="uid://7lda1ltkuxnj" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-center-short.glb" id="50_a0ike"]
+[ext_resource type="PackedScene" uid="uid://bc8bdup4xjx22" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-center.glb" id="51_xbcgm"]
+[ext_resource type="PackedScene" uid="uid://dviehgg14tbr1" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-closed-short.glb" id="52_vgnob"]
+[ext_resource type="PackedScene" uid="uid://44vr15p15uc2" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-closed.glb" id="53_pudwr"]
+[ext_resource type="PackedScene" uid="uid://dnpne78d38n3y" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-open-short.glb" id="54_sld7y"]
+[ext_resource type="PackedScene" uid="uid://e7ubya4cktaw" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-open.glb" id="55_blukg"]
+[ext_resource type="PackedScene" uid="uid://705iq84p5qua" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-sides-short.glb" id="56_hiuhg"]
+[ext_resource type="PackedScene" uid="uid://dd12qql54r7nj" path="res://assets/Kenney/Building kit/Models/GLB format/stairs-sides.glb" id="57_y28lw"]
+[ext_resource type="PackedScene" uid="uid://cilbn3c8oiwfn" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner-column-bottom.glb" id="58_tplrh"]
+[ext_resource type="PackedScene" uid="uid://baxo5tt7lhj4l" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner-column-small-bottom.glb" id="59_kfbh7"]
+[ext_resource type="PackedScene" uid="uid://cd7l6suwb4w1t" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner-column-small.glb" id="60_mwpa8"]
+[ext_resource type="PackedScene" uid="uid://c0xxufpsa1qri" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner-column.glb" id="61_iqj0q"]
+[ext_resource type="PackedScene" uid="uid://dsj70tqs2x8ut" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner-diagonal.glb" id="62_5juiu"]
+[ext_resource type="PackedScene" uid="uid://d3oxivhipip2k" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner-round.glb" id="63_5we5y"]
+[ext_resource type="PackedScene" uid="uid://cqpqnoqvglbj5" path="res://assets/Kenney/Building kit/Models/GLB format/wall-corner.glb" id="64_aw12k"]
+[ext_resource type="PackedScene" uid="uid://xwei7oiqacfr" path="res://assets/Kenney/Building kit/Models/GLB format/wall-doorway-round.glb" id="65_evcaj"]
+[ext_resource type="PackedScene" uid="uid://02lbfmsc2lms" path="res://assets/Kenney/Building kit/Models/GLB format/wall-doorway-square.glb" id="66_4tngu"]
+[ext_resource type="PackedScene" uid="uid://cadk2murq73ww" path="res://assets/Kenney/Building kit/Models/GLB format/wall-doorway-wide-round.glb" id="67_e7a1h"]
+[ext_resource type="PackedScene" uid="uid://c6moi7rifgs18" path="res://assets/Kenney/Building kit/Models/GLB format/wall-doorway-wide-square.glb" id="68_y2gso"]
+[ext_resource type="PackedScene" uid="uid://bccx5gfiaunsc" path="res://assets/Kenney/Building kit/Models/GLB format/wall-half.glb" id="69_x66o0"]
+[ext_resource type="PackedScene" uid="uid://71mh3u1mpf2x" path="res://assets/Kenney/Building kit/Models/GLB format/wall-low.glb" id="70_6oubt"]
+[ext_resource type="PackedScene" uid="uid://rtye5agre3b" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-round-detailed.glb" id="71_vm5t1"]
+[ext_resource type="PackedScene" uid="uid://dcjj8iy501a5" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-round.glb" id="72_t4edj"]
+[ext_resource type="PackedScene" uid="uid://fk4xc50ncyd4" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-square-detailed.glb" id="73_k36uc"]
+[ext_resource type="PackedScene" uid="uid://b4i0yfnrurf4c" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-square.glb" id="74_tfdhq"]
+[ext_resource type="PackedScene" uid="uid://bfjc7dm1v6q88" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-wide-round-detailed.glb" id="75_cefvm"]
+[ext_resource type="PackedScene" uid="uid://ch1dj7xetlce2" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-wide-round.glb" id="76_i3ac0"]
+[ext_resource type="PackedScene" uid="uid://d0wkhwmktnr4s" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-wide-square-detailed.glb" id="77_ewepk"]
+[ext_resource type="PackedScene" uid="uid://r7x52a21jlum" path="res://assets/Kenney/Building kit/Models/GLB format/wall-window-wide-square.glb" id="78_gotxy"]
+[ext_resource type="PackedScene" uid="uid://bwmclnr2ad5uv" path="res://assets/Kenney/Building kit/Models/GLB format/wall.glb" id="79_sx3sg"]
+
+[node name="building" type="Node3D"]
+
+[node name="barricade-doorway-a2" parent="." instance=ExtResource("1_jlqvh")]
+
+[node name="barricade-doorway-b2" parent="." instance=ExtResource("2_m4u0u")]
+
+[node name="barricade-doorway-c2" parent="." instance=ExtResource("3_rpth0")]
+
+[node name="barricade-window-a2" parent="." instance=ExtResource("4_paqtd")]
+
+[node name="barricade-window-b2" parent="." instance=ExtResource("5_702kw")]
+
+[node name="barricade-window-c2" parent="." instance=ExtResource("6_xopu2")]
+
+[node name="border-corner-diagonal2" parent="." instance=ExtResource("7_l2ia8")]
+
+[node name="border-corner-round2" parent="." instance=ExtResource("8_mqrxx")]
+
+[node name="border-corner-small2" parent="." instance=ExtResource("9_srd1x")]
+
+[node name="border-corner2" parent="." instance=ExtResource("10_tvogk")]
+
+[node name="border-high-corner-diagonal2" parent="." instance=ExtResource("11_bjy83")]
+
+[node name="border-high-corner-round2" parent="." instance=ExtResource("12_2rofj")]
+
+[node name="border-high-corner-small2" parent="." instance=ExtResource("13_mlk3y")]
+
+[node name="border-high-corner2" parent="." instance=ExtResource("14_mlljf")]
+
+[node name="border-high2" parent="." instance=ExtResource("15_ecbut")]
+
+[node name="border2" parent="." instance=ExtResource("16_dqk34")]
+
+[node name="column-thin2" parent="." instance=ExtResource("17_si366")]
+
+[node name="column-wide2" parent="." instance=ExtResource("18_rqisn")]
+
+[node name="column2" parent="." instance=ExtResource("19_efvqa")]
+
+[node name="detail-pipe2" parent="." instance=ExtResource("20_1ppke")]
+
+[node name="door-rotate-round-a2" parent="." instance=ExtResource("21_wouyj")]
+
+[node name="door-rotate-round-b2" parent="." instance=ExtResource("22_xy615")]
+
+[node name="door-rotate-round-c2" parent="." instance=ExtResource("23_pqnkr")]
+
+[node name="door-rotate-round-d2" parent="." instance=ExtResource("24_0mb38")]
+
+[node name="door-rotate-square-a2" parent="." instance=ExtResource("25_yaert")]
+
+[node name="door-rotate-square-b2" parent="." instance=ExtResource("26_bfoi2")]
+
+[node name="door-rotate-square-c2" parent="." instance=ExtResource("27_6mlh7")]
+
+[node name="door-rotate-square-d2" parent="." instance=ExtResource("28_aqyy1")]
+
+[node name="floor-corner-diagonal2" parent="." instance=ExtResource("29_ya26t")]
+
+[node name="floor-corner-round2" parent="." instance=ExtResource("30_i2hn6")]
+
+[node name="floor-half2" parent="." instance=ExtResource("31_comim")]
+
+[node name="floor-quarter2" parent="." instance=ExtResource("32_ycpr2")]
+
+[node name="floor2" parent="." instance=ExtResource("33_pwiug")]
+
+[node name="gutter-vertical-bottom2" parent="." instance=ExtResource("34_moi7w")]
+
+[node name="gutter-vertical-short2" parent="." instance=ExtResource("35_05tuv")]
+
+[node name="gutter-vertical-top2" parent="." instance=ExtResource("36_yk3ia")]
+
+[node name="gutter-vertical-wall2" parent="." instance=ExtResource("37_sorp1")]
+
+[node name="gutter-vertical2" parent="." instance=ExtResource("38_2218b")]
+
+[node name="plating-detailed-wide2" parent="." instance=ExtResource("39_570y4")]
+
+[node name="plating-detailed2" parent="." instance=ExtResource("40_ysn3b")]
+
+[node name="plating-wide2" parent="." instance=ExtResource("41_cswxo")]
+
+[node name="plating2" parent="." instance=ExtResource("42_crf6b")]
+
+[node name="roof-flat-center2" parent="." instance=ExtResource("43_pj83c")]
+
+[node name="roof-flat-corner-inner2" parent="." instance=ExtResource("44_t12bt")]
+
+[node name="roof-flat-corner2" parent="." instance=ExtResource("45_xi8xx")]
+
+[node name="roof-flat-patch-large2" parent="." instance=ExtResource("46_w1kty")]
+
+[node name="roof-flat-patch2" parent="." instance=ExtResource("47_4tub8")]
+
+[node name="roof-flat-side2" parent="." instance=ExtResource("48_qxikk")]
+
+[node name="roof-flat-square2" parent="." instance=ExtResource("49_5eb1p")]
+
+[node name="stairs-center-short2" parent="." instance=ExtResource("50_a0ike")]
+
+[node name="stairs-center2" parent="." instance=ExtResource("51_xbcgm")]
+
+[node name="stairs-closed-short2" parent="." instance=ExtResource("52_vgnob")]
+
+[node name="stairs-closed2" parent="." instance=ExtResource("53_pudwr")]
+
+[node name="stairs-open-short2" parent="." instance=ExtResource("54_sld7y")]
+
+[node name="stairs-open2" parent="." instance=ExtResource("55_blukg")]
+
+[node name="stairs-sides-short2" parent="." instance=ExtResource("56_hiuhg")]
+
+[node name="stairs-sides2" parent="." instance=ExtResource("57_y28lw")]
+
+[node name="wall-corner-column-bottom2" parent="." instance=ExtResource("58_tplrh")]
+
+[node name="wall-corner-column-small-bottom2" parent="." instance=ExtResource("59_kfbh7")]
+
+[node name="wall-corner-column-small2" parent="." instance=ExtResource("60_mwpa8")]
+
+[node name="wall-corner-column2" parent="." instance=ExtResource("61_iqj0q")]
+
+[node name="wall-corner-diagonal2" parent="." instance=ExtResource("62_5juiu")]
+
+[node name="wall-corner-round2" parent="." instance=ExtResource("63_5we5y")]
+
+[node name="wall-corner2" parent="." instance=ExtResource("64_aw12k")]
+
+[node name="wall-doorway-round2" parent="." instance=ExtResource("65_evcaj")]
+
+[node name="wall-doorway-square2" parent="." instance=ExtResource("66_4tngu")]
+
+[node name="wall-doorway-wide-round2" parent="." instance=ExtResource("67_e7a1h")]
+
+[node name="wall-doorway-wide-square2" parent="." instance=ExtResource("68_y2gso")]
+
+[node name="wall-half2" parent="." instance=ExtResource("69_x66o0")]
+
+[node name="wall-low2" parent="." instance=ExtResource("70_6oubt")]
+
+[node name="wall-window-round-detailed2" parent="." instance=ExtResource("71_vm5t1")]
+
+[node name="wall-window-round2" parent="." instance=ExtResource("72_t4edj")]
+
+[node name="wall-window-square-detailed2" parent="." instance=ExtResource("73_k36uc")]
+
+[node name="wall-window-square2" parent="." instance=ExtResource("74_tfdhq")]
+
+[node name="wall-window-wide-round-detailed2" parent="." instance=ExtResource("75_cefvm")]
+
+[node name="wall-window-wide-round2" parent="." instance=ExtResource("76_i3ac0")]
+
+[node name="wall-window-wide-square-detailed2" parent="." instance=ExtResource("77_ewepk")]
+
+[node name="wall-window-wide-square2" parent="." instance=ExtResource("78_gotxy")]
+
+[node name="wall2" parent="." instance=ExtResource("79_sx3sg")]
