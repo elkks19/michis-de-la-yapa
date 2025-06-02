@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=4 uid="uid://x5047a8f7och"]
 
-[ext_resource type="Script" uid="uid://deusy41ci8trf" path="res://scripts/jacobita.gd" id="1_vpq60"]
+[ext_resource type="Script" path="res://scripts/jacobita.gd" id="1_vpq60"]
 [ext_resource type="Texture2D" uid="uid://coj3d5o6l116i" path="res://assets/jacobitaTexturas/Textures/Tex_Cat_E.png" id="2_j8dyf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8x8s"]

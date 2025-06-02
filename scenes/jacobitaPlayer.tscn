@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://b4b08lx8fbum2"]
+[gd_scene load_steps=22 format=4 uid="uid://b4b08lx8fbum2"]
 
 [ext_resource type="Script" uid="uid://8aap100rw6dt" path="res://scripts/jacobita_player.gd" id="1_pfwol"]
 [ext_resource type="Texture2D" uid="uid://coj3d5o6l116i" path="res://assets/jacobitaTexturas/Textures/Tex_Cat_E.png" id="2_3crhq"]
@@ -5605,6 +5605,10 @@ _data = {
 &"Walk": SubResource("Animation_2nhdm")
 }
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pfwol"]
+radius = 0.0989736
+height = 0.197947
+
 [node name="jacobita" type="CharacterBody3D"]
 script = ExtResource("1_pfwol")
 
@@ -5924,3 +5928,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_desn6")
 }
 autoplay = "Idle_B"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0880606, 0)
+shape = SubResource("CapsuleShape3D_pfwol")

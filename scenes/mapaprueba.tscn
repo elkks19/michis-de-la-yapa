@@ -107,14 +107,14 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 [node name="jacobita" parent="." groups=["jacobita"] instance=ExtResource("5_x87rx")]
 transform = Transform3D(-0.224271, 0, 0.974527, 0, 1, 0, -0.974527, 0, -0.224271, -3.16241, 1.73634, -1.46088)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="jacobita"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="jacobita"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00388837, 0.0651758, 0.00884438)
 shape = SubResource("SphereShape3D_x87rx")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="jacobita"]
+[node name="SpringArm3D2" type="SpringArm3D" parent="jacobita"]
 transform = Transform3D(0.00119093, -1.68203e-05, 1.20341e-07, 2.15169e-05, 0.000928107, -1.33038e-05, 8.45961e-07, 7.30893e-05, 0.000168962, -0.050842, 0.204248, -0.530648)
 
-[node name="Camera3D" type="Camera3D" parent="jacobita/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="jacobita/SpringArm3D2"]
 transform = Transform3D(-799.706, 1.63672, -25.666, -1.4988e-05, 1039.29, 98.1486, 145.952, 442.951, -6946, 6.76758, -19.701, 317.811)
 fov = 77.5363
 

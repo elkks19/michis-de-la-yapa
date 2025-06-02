@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cokwlbqt2v5u0"]
+[gd_scene load_steps=10 format=3 uid="uid://cokwlbqt2v5u0"]
 
 [ext_resource type="Texture2D" uid="uid://bbxdsfvanubjc" path="res://materials/ground dirt/Ground_Dirt_009_BaseColor.jpg" id="1_nrd35"]
 [ext_resource type="MeshLibrary" uid="uid://kxtet32131rm" path="res://assets/mallas/building blocks.tres" id="2_k7lwh"]
 [ext_resource type="MeshLibrary" uid="uid://kopgob85gijm" path="res://assets/mallas/road tiles.tres" id="3_6i2c2"]
 [ext_resource type="MeshLibrary" uid="uid://c5gcq3wcfexlo" path="res://assets/mallas/city kit.tres" id="4_6pxv8"]
-[ext_resource type="PackedScene" uid="uid://cksnbli2ex0af" path="res://scenes/gato.tscn" id="5_atgyb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4qgb0"]
 sky_top_color = Color(0.74, 0.2886, 0.461637, 1)
@@ -41,10 +40,6 @@ uv1_triplanar = true
 [sub_resource type="CylinderMesh" id="CylinderMesh_vsp40"]
 material = SubResource("StandardMaterial3D_6pxv8")
 top_radius = 1000.0
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k7lwh"]
-radius = 7.55285
-height = 15.1057
 
 [node name="mapa" type="Node3D"]
 
@@ -95,16 +90,3 @@ data = {
 "cells": PackedInt32Array(65538, 65533, 1048592, 65538, 65532, 1048593, 65538, 65531, 1048593, 65538, 65530, 1048593, 65538, 65529, 1441810)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
-
-[node name="gato" parent="." instance=ExtResource("5_atgyb")]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -0.205478, 1.79677, -13.2033)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="gato"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.75932, 0)
-shape = SubResource("CapsuleShape3D_k7lwh")
-
-[node name="SpringArm3D" type="SpringArm3D" parent="gato"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.620345, 15.5641, -37.0259)
-
-[node name="Camera3D" type="Camera3D" parent="gato/SpringArm3D"]
-transform = Transform3D(-33.3333, -2.0132e-12, -2.91409e-06, -1.12743e-06, 30.7376, 12.8963, 2.68716e-06, 12.8963, -30.7376, 0.265288, 4.75134, 11.6545)
