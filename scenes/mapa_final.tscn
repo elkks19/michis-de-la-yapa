@@ -1,0 +1,126 @@
+[gd_scene load_steps=9 format=3 uid="uid://c54baqn305vuo"]
+
+[ext_resource type="Texture2D" uid="uid://bbxdsfvanubjc" path="res://materials/ground dirt/Ground_Dirt_009_BaseColor.jpg" id="1_tdf7e"]
+[ext_resource type="PackedScene" uid="uid://dec8ecs321t4j" path="res://scenes/jacobita_final.tscn" id="2_i2o80"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_4bplg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m8ib6"]
+sky_top_color = Color(0.74, 0.2886, 0.461637, 1)
+sky_horizon_color = Color(0.82891, 0.461776, 0.372154, 1)
+sky_curve = 0.121838
+ground_horizon_color = Color(0.897715, 0.64991, 0.595316, 1)
+sun_angle_max = 25.0
+sun_curve = 0.109807
+
+[sub_resource type="Sky" id="Sky_tfnl5"]
+sky_material = SubResource("ProceduralSkyMaterial_m8ib6")
+
+[sub_resource type="Environment" id="Environment_m5cq6"]
+background_mode = 2
+sky = SubResource("Sky_tfnl5")
+reflected_light_source = 2
+tonemap_mode = 2
+tonemap_exposure = 0.8
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.015
+volumetric_fog_albedo = Color(0.96, 0.52832, 0.2784, 1)
+volumetric_fog_emission = Color(1, 0.533612, 0.468613, 1)
+volumetric_fog_emission_energy = 0.3
+volumetric_fog_gi_inject = 2.0
+volumetric_fog_anisotropy = 0.0
+volumetric_fog_length = 256.0
+volumetric_fog_detail_spread = 3.6
+volumetric_fog_sky_affect = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdf7e"]
+albedo_texture = ExtResource("1_tdf7e")
+uv1_triplanar = true
+
+[sub_resource type="GDScript" id="GDScript_tdf7e"]
+script/source = "extends Camera3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="mapa_final" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_4bplg")
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_m5cq6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+light_color = Color(0.998149, 0.952256, 0.66971, 1)
+light_volumetric_fog_energy = 0.5
+light_angular_distance = 2.0
+shadow_enabled = true
+shadow_normal_bias = 3.0
+shadow_transmittance_bias = 0.0
+shadow_opacity = 0.5
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment"]
+material_override = SubResource("StandardMaterial3D_tdf7e")
+use_collision = true
+size = Vector3(1000, 1, 1000)
+
+[node name="personajes" type="GridContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Jacobita" type="SubViewportContainer" parent="personajes"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="jacobitaViewport" type="SubViewport" parent="personajes/Jacobita"]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="jacobita" parent="personajes/Jacobita/jacobitaViewport" instance=ExtResource("2_i2o80")]
+transform = Transform3D(0.0648633, 0, -0.997894, 0, 1, 0, 0.997894, 0, 0.0648633, 0.0138894, 1.12796, 0.280686)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="personajes/Jacobita/jacobitaViewport/jacobita"]
+transform = Transform3D(1, 0, 0, 0, 0.988364, -0.152106, 0, 0.152106, 0.988364, 0, 0.455714, -0.421664)
+
+[node name="Camera3D" type="Camera3D" parent="personajes/Jacobita/jacobitaViewport/jacobita/SpringArm3D"]
+transform = Transform3D(-1, -1.70342e-14, -8.74228e-08, -2.74849e-08, 0.949294, 0.314391, 8.29899e-08, 0.314391, -0.949294, 0, 0, 0)
+script = SubResource("GDScript_tdf7e")
+
+[node name="noah" type="SubViewportContainer" parent="personajes"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch = true
+
+[node name="noahViewport" type="SubViewport" parent="personajes/noah"]
+handle_input_locally = false
+size = Vector2i(574, 648)
+render_target_update_mode = 4
+
+[node name="noah" parent="personajes/noah/noahViewport" instance=ExtResource("2_i2o80")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.398628, 1.23878, 0.280686)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="personajes/noah/noahViewport/noah"]
+transform = Transform3D(1, 0, 0, 0, 0.988364, -0.152106, 0, 0.152106, 0.988364, 0, 0.455714, -0.421664)
+
+[node name="Camera3D" type="Camera3D" parent="personajes/noah/noahViewport/noah/SpringArm3D"]
+transform = Transform3D(-1, -1.70342e-14, -8.74228e-08, -2.74849e-08, 0.949294, 0.314391, 8.29899e-08, 0.314391, -0.949294, 0, 0, 0)
+script = SubResource("GDScript_tdf7e")

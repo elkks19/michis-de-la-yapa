@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cokwlbqt2v5u0"]
 
-[ext_resource type="Script" uid="uid://dlbnp7eahdkbh" path="res://scripts/mapa.gd" id="1_6i2c2"]
+[ext_resource type="Script" path="res://scripts/mapa.gd" id="1_6i2c2"]
 [ext_resource type="Texture2D" uid="uid://bbxdsfvanubjc" path="res://materials/ground dirt/Ground_Dirt_009_BaseColor.jpg" id="1_nrd35"]
 [ext_resource type="MeshLibrary" uid="uid://kxtet32131rm" path="res://assets/mallas/building blocks.tres" id="2_k7lwh"]
 [ext_resource type="MeshLibrary" uid="uid://kopgob85gijm" path="res://assets/mallas/road tiles.tres" id="3_6i2c2"]
@@ -16,12 +16,12 @@ ground_horizon_color = Color(0.897715, 0.64991, 0.595316, 1)
 sun_angle_max = 25.0
 sun_curve = 0.109807
 
-[sub_resource type="Sky" id="Sky_tfnl5"]
+[sub_resource type="Sky" id="Sky_6i2c2"]
 sky_material = SubResource("ProceduralSkyMaterial_4qgb0")
 
 [sub_resource type="Environment" id="Environment_nrd35"]
 background_mode = 2
-sky = SubResource("Sky_tfnl5")
+sky = SubResource("Sky_6i2c2")
 reflected_light_source = 2
 tonemap_mode = 2
 tonemap_exposure = 0.8
