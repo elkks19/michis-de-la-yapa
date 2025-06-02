@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbxdgh82myuuy"]
+
+[ext_resource type="Script" uid="uid://bw5ba8ddkf8br" path="res://scripts/vida.gd" id="1_nd7lo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_p05bm"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvqax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vaqpk"]
+bg_color = Color(0.705904, 0.527183, 0.72972, 1)
+border_width_bottom = 3
+border_color = Color(0.846356, 0.757793, 0.937224, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_bottom = 3.0
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bsjq"]
+bg_color = Color(0.649053, 0.551055, 0.755846, 1)
+border_width_bottom = 3
+border_color = Color(0.962015, 0.706806, 0.89529, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_bottom = 3.0
+
+[node name="Sprite3D" type="Sprite3D"]
+transform = Transform3D(0.967413, 0, -0.253201, 0, 1, 0, 0.253201, 0, 0.967413, 0, 0, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_p05bm")
+script = ExtResource("1_nd7lo")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(60, 30)
+
+[node name="Panel" type="Panel" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mvqax")
+
+[node name="ProgressBar" type="ProgressBar" parent="SubViewport/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.058
+anchor_top = 0.5
+anchor_right = 0.913
+anchor_bottom = 0.51
+offset_left = -0.0320001
+offset_top = -12.5
+offset_right = 0.0479965
+offset_bottom = 13.01
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_vaqpk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7bsjq")
+value = 100.0

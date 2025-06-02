@@ -104,7 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.75932, 0)
 shape = SubResource("CapsuleShape3D_k7lwh")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="gato"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.6466, -22.6181)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.620345, 15.5641, -37.0259)
 
 [node name="Camera3D" type="Camera3D" parent="gato/SpringArm3D"]
-transform = Transform3D(-33.3333, 1.18424e-13, -2.91409e-06, -1.12743e-06, 30.7376, 12.8963, 2.68716e-06, 12.8963, -30.7376, 0, 6.78225, 8.71561)
+transform = Transform3D(-33.3333, -2.0132e-12, -2.91409e-06, -1.12743e-06, 30.7376, 12.8963, 2.68716e-06, 12.8963, -30.7376, 0.265288, 4.75134, 11.6545)
