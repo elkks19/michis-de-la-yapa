@@ -63,6 +63,7 @@ shadow_transmittance_bias = 0.0
 shadow_opacity = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0150051, -0.102729, -0.00980091)
 mesh = SubResource("CylinderMesh_vsp40")
 
 [node name="build blocks" type="GridMap" parent="."]
@@ -92,7 +93,7 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 mesh_library = ExtResource("4_6pxv8")
 cell_size = Vector3(2, 1.1, 2)
 data = {
-"cells": PackedInt32Array(65538, 65533, 1048592, 65538, 65532, 1048593, 65538, 65531, 1048593, 65538, 65530, 1048593, 65538, 65529, 1441810)
+"cells": PackedInt32Array(65538, 65533, 1048592, 65538, 65532, 1048593, 65538, 65531, 1048593, 65538, 65530, 1048593, 65538, 65529, 1441810, 65547, 65530, 5)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
