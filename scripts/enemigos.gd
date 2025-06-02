@@ -6,13 +6,16 @@ var state_machine
 @export var player_path: NodePath = '/root/mapa/gato'
 @export var SPEED : float = 2.5
 @export var ATTACK_RANGE : float = 1
+@export var VIEW_RANGE: float = 10
 
 @onready var nav = $NavigationAgent3D
 @onready var animation = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var area = $Area3D
+@onready var area_collision = $Area3D/CollisionShape3D
 
 func _ready():
+	area_collision.radius = VIEW_RANGE
 	player = get_node(player_path)
 	state_machine = anim_tree.get("parameters/playback")
 
