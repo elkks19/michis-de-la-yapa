@@ -1,43 +1,33 @@
-[gd_scene load_steps=17 format=3 uid="uid://dhe4g5e1hvbps"]
+[gd_scene load_steps=17 format=3 uid="uid://bespvfl626dw5"]
 
-[ext_resource type="Texture2D" uid="uid://bbxdsfvanubjc" path="res://materials/ground dirt/Ground_Dirt_009_BaseColor.jpg" id="1_x87rx"]
-[ext_resource type="MeshLibrary" uid="uid://kxtet32131rm" path="res://assets/mallas/building blocks.tres" id="2_vaqpk"]
-[ext_resource type="MeshLibrary" uid="uid://kopgob85gijm" path="res://assets/mallas/road tiles.tres" id="3_7bsjq"]
-[ext_resource type="MeshLibrary" uid="uid://c5gcq3wcfexlo" path="res://assets/mallas/city kit.tres" id="4_p05bm"]
-[ext_resource type="PackedScene" uid="uid://b4b08lx8fbum2" path="res://scenes/jacobitaPlayer.tscn" id="5_x87rx"]
-[ext_resource type="PackedScene" uid="uid://bbxdgh82myuuy" path="res://scenes/vida.tscn" id="6_vaqpk"]
-[ext_resource type="PackedScene" uid="uid://b732tbomyalj3" path="res://scenes/main.tscn" id="7_7bsjq"]
+[ext_resource type="Texture2D" uid="uid://bbxdsfvanubjc" path="res://materials/ground dirt/Ground_Dirt_009_BaseColor.jpg" id="1_rpin2"]
+[ext_resource type="MeshLibrary" uid="uid://kxtet32131rm" path="res://assets/mallas/building blocks.tres" id="2_0yb57"]
+[ext_resource type="MeshLibrary" uid="uid://kopgob85gijm" path="res://assets/mallas/road tiles.tres" id="3_cff1c"]
+[ext_resource type="MeshLibrary" uid="uid://c5gcq3wcfexlo" path="res://assets/mallas/city kit.tres" id="4_weplb"]
+[ext_resource type="PackedScene" uid="uid://b4b08lx8fbum2" path="res://scenes/jacobitaPlayer.tscn" id="5_e322a"]
+[ext_resource type="PackedScene" uid="uid://bbxdgh82myuuy" path="res://scenes/vida.tscn" id="6_3f5tu"]
+[ext_resource type="PackedScene" uid="uid://b732tbomyalj3" path="res://scenes/main.tscn" id="7_0yb57"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4qgb0"]
-sky_top_color = Color(0.74, 0.2886, 0.461637, 1)
-sky_horizon_color = Color(0.82891, 0.461776, 0.372154, 1)
-sky_curve = 0.121838
-ground_horizon_color = Color(0.897715, 0.64991, 0.595316, 1)
-sun_angle_max = 25.0
-sun_curve = 0.109807
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rpin2"]
+resource_local_to_scene = true
+sky_top_color = Color(0.253509, 0.412407, 0.845131, 1)
+sky_horizon_color = Color(0.904438, 0.558298, 0.321339, 1)
+sky_cover_modulate = Color(1, 1, 1, 0.909804)
+ground_bottom_color = Color(0.3, 0.2325, 0.15, 1)
+ground_horizon_color = Color(0.758045, 0.634246, 0.445605, 1)
+sun_angle_max = 109.2
 
-[sub_resource type="Sky" id="Sky_tfnl5"]
-sky_material = SubResource("ProceduralSkyMaterial_4qgb0")
+[sub_resource type="Sky" id="Sky_0yb57"]
+sky_material = SubResource("ProceduralSkyMaterial_rpin2")
 
-[sub_resource type="Environment" id="Environment_nrd35"]
+[sub_resource type="Environment" id="Environment_cff1c"]
+resource_local_to_scene = true
 background_mode = 2
-sky = SubResource("Sky_tfnl5")
-reflected_light_source = 2
-tonemap_mode = 2
-tonemap_exposure = 0.8
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.015
-volumetric_fog_albedo = Color(0.96, 0.52832, 0.2784, 1)
-volumetric_fog_emission = Color(1, 0.533612, 0.468613, 1)
-volumetric_fog_emission_energy = 0.3
-volumetric_fog_gi_inject = 2.0
-volumetric_fog_anisotropy = 0.0
-volumetric_fog_length = 256.0
-volumetric_fog_detail_spread = 3.6
-volumetric_fog_sky_affect = 0.6
+sky = SubResource("Sky_0yb57")
+tonemap_exposure = 1.14
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pxv8"]
-albedo_texture = ExtResource("1_x87rx")
+albedo_texture = ExtResource("1_rpin2")
 uv1_triplanar = true
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vsp40"]
@@ -58,12 +48,13 @@ data = PackedVector3Array(0, 0.5, 0, 0, 0.5, 0, 0, 0.4977, 0.0475, 0, 0.5, 0, 0.
 [node name="mapa" type="Node3D"]
 
 [node name="Environment" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.1218, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
-environment = SubResource("Environment_nrd35")
+environment = SubResource("Environment_cff1c")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-light_color = Color(0.998149, 0.952256, 0.66971, 1)
+light_color = Color(0.9972, 0.936139, 0.826422, 1)
 light_volumetric_fog_energy = 0.5
 light_angular_distance = 2.0
 shadow_enabled = true
@@ -72,54 +63,56 @@ shadow_transmittance_bias = 0.0
 shadow_opacity = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(-0.0251146, 0, 0, 0, 0.210383, 0, 0, 0, 0.0245156, 3.71801, 13.0465, -13.2858)
 mesh = SubResource("CylinderMesh_vsp40")
 
+[node name="road" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.54296, 0.205642, -0.257704)
+mesh_library = ExtResource("3_cff1c")
+cell_size = Vector3(3, 1, 3)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65535, 172, 1442066, 65535, 175, 1442066, 65535, 169, 1442066, 131066, 0, 159, 131067, 0, 159, 131068, 0, 159, 131069, 0, 159, 131070, 0, 159, 131071, 0, 159, 65536, 0, 165, 65537, 0, 159, 3, 65535, 1048724, 65535, 65535, 1441954, 131071, 65534, 162, 131070, 65532, 162, 65540, 65534, 1048735, 65540, 65535, 1048735, 65540, 0, 1048730, 65538, 0, 159, 65539, 65532, 1048738, 65539, 65528, 1441951, 65539, 65527, 1441951, 65539, 65526, 1441951, 65539, 65525, 1441951, 65539, 65524, 1441957, 131066, 65535, 655519, 131065, 65535, 655519, 131063, 65535, 655519, 131064, 65535, 655519, 131062, 65535, 655519, 65538, 65534, 157, 65539, 65534, 655522, 65538, 65533, 162, 65539, 65533, 1048738, 65537, 65532, 162, 65538, 65532, 655522, 65540, 65533, 1048735, 65540, 65532, 1048735, 65536, 65534, 162, 65537, 65533, 162, 65537, 65531, 162, 65537, 65535, 162, 65537, 65534, 162, 65537, 65529, 0, 65538, 65528, 1048734, 65537, 65528, 162, 65537, 65527, 162, 65538, 65527, 1441958, 65537, 65526, 162, 65538, 65526, 1441804, 65538, 65525, 1441954, 65537, 65525, 162, 65536, 65525, 162, 65536, 65526, 162, 65536, 65527, 162, 65536, 65528, 162, 65536, 65529, 162, 65536, 65530, 162, 65536, 65531, 162, 65536, 65532, 162, 65536, 65533, 162, 65536, 65535, 162, 131071, 65533, 162, 131071, 65532, 162, 131071, 65531, 162, 131071, 65530, 162, 131071, 65529, 162, 131071, 65528, 162, 65538, 65529, 1048576, 65537, 65530, 0, 131074, 65528, 19, 196607, 65529, 19, 196607, 65531, 19, 65540, 65531, 159, 65539, 65531, 165, 65539, 65530, 1048576, 65540, 65530, 1048735, 65539, 65529, 1048734, 65538, 65524, 1441954, 65541, 65530, 1048726, 65542, 65530, 1048715, 65543, 65530, 1048715, 65542, 65531, 159, 65545, 65530, 655590, 65541, 65531, 159, 65541, 65532, 655522, 65541, 65533, 655522, 65541, 65534, 655522, 65541, 65535, 655522, 65542, 65535, 655522, 65542, 65534, 655522, 65543, 65534, 655522, 65543, 65533, 655375, 65542, 65532, 655522, 65543, 65532, 655522, 65543, 65535, 173, 65543, 0, 173, 65542, 0, 162, 65543, 65531, 655522, 131077, 65534, 655379, 131076, 65531, 655378, 131076, 65533, 655378, 131074, 65531, 655378, 65542, 65533, 655381, 65544, 65533, 1048750, 65544, 65531, 1048762, 65544, 65534, 1048750, 65544, 65535, 655641, 65544, 65532, 1048750, 65545, 65531, 655522, 65545, 65532, 655522, 65545, 65533, 655522, 65545, 65534, 655522, 65545, 65535, 655522, 65546, 65531, 655522, 65546, 65532, 655522, 65546, 65533, 655522, 65546, 65534, 655522, 65546, 65535, 655522, 65546, 65530, 655519, 131081, 65531, 655379, 131081, 65532, 655379, 131081, 65533, 655379, 131081, 65534, 655379, 131081, 65535, 655379, 65544, 65530, 162, 65544, 65529, 162, 65544, 65528, 162, 65544, 65527, 162, 65542, 65528, 162, 65541, 65529, 162, 65540, 65529, 162, 65542, 65529, 162, 65542, 65527, 162, 65542, 65526, 1048738, 65541, 65526, 162, 65540, 65526, 162, 65540, 65527, 162, 65538, 65531, 162, 65540, 65528, 162, 65541, 65528, 162, 65541, 65527, 162, 65545, 65529, 1441954, 65543, 65529, 1441966, 65543, 65528, 1441966, 65543, 65527, 1441966, 65543, 65526, 1441966, 65545, 65528, 1441954, 65545, 65527, 1441954, 65545, 65526, 1441954, 65545, 65525, 1441954, 65543, 65525, 1441959, 65544, 65525, 1441954, 65542, 65525, 1441954, 65541, 65524, 655519, 65542, 65524, 655519, 65543, 65524, 655519, 65544, 65524, 655519, 65545, 65524, 655519, 65546, 65524, 655519, 131081, 65529, 655379, 131081, 65528, 655379, 131081, 65527, 655379, 131081, 65526, 655379)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="city" type="GridMap" parent="."]
+mesh_library = ExtResource("4_weplb")
+cell_size = Vector3(2, 1.1, 2)
+data = {
+"cells": PackedInt32Array(65538, 65533, 1048592, 65538, 65532, 1048593, 65538, 65531, 1048593, 65538, 65530, 1048593, 65538, 65529, 1441810, 65538, 65534, 655383, 131071, 65526, 1441814, 131071, 65525, 1441814, 131071, 65524, 1441814, 65536, 65527, 655381, 65536, 65523, 21, 131071, 65523, 23, 131071, 65527, 23, 131070, 65525, 23, 131070, 65523, 23, 65538, 65523, 23, 65537, 65529, 23, 65541, 65528, 655370, 65542, 65528, 655364, 65543, 65528, 655372, 65544, 65528, 655383, 65540, 65525, 16, 65540, 65524, 16, 65540, 65523, 16, 65540, 65522, 16, 65540, 65521, 16, 65540, 65519, 23, 65540, 65520, 23, 65540, 65526, 23, 65537, 65527, 23, 65546, 65521, 1048598, 65546, 65522, 1048598, 65546, 65525, 1048597)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
 [node name="build blocks" type="GridMap" parent="."]
-mesh_library = ExtResource("2_vaqpk")
+mesh_library = ExtResource("2_0yb57")
 cell_size = Vector3(1, 1.24, 1)
 cell_center_x = false
 cell_center_y = false
 cell_center_z = false
 cell_scale = 1.5
 data = {
-"cells": PackedInt32Array(131065, 65527, 655383, 131058, 65525, 1048598, 196601, 65527, 655395, 196594, 65525, 1048611, 196598, 65527, 655407, 131062, 65527, 655383, 131069, 65527, 655383, 131069, 65524, 1441816, 196605, 65524, 1441818)
-}
-metadata/_editor_floor_ = Vector3(0, 2, 0)
-
-[node name="road" type="GridMap" parent="."]
-mesh_library = ExtResource("3_7bsjq")
-cell_size = Vector3(3, 1, 3)
-cell_center_x = false
-cell_center_y = false
-cell_center_z = false
-data = {
-"cells": PackedInt32Array(65535, 172, 1442066, 65535, 175, 1442066, 65535, 169, 1442066, 131066, 0, 159, 131067, 65530, 655519, 131067, 0, 159, 131068, 65530, 655519, 131068, 0, 159, 131069, 65530, 655519, 131069, 0, 159, 131070, 65530, 655519, 131070, 0, 159, 131071, 65526, 655522, 131071, 0, 159, 65536, 65525, 1441939, 65536, 65531, 1441951, 65536, 0, 165, 65537, 65535, 1048735, 65537, 0, 159, 65538, 65525, 655519, 65539, 65525, 655519, 65540, 65525, 655519, 65541, 65525, 655519, 3, 65535, 1048724, 131071, 65530, 655519, 65536, 65530, 147, 65540, 65530, 655512, 65537, 65530, 655525, 65537, 65529, 1048735, 65537, 65528, 1048735, 65537, 65527, 1048735, 131070, 65526, 655522, 131069, 65526, 655522, 131068, 65526, 655522, 131067, 65526, 655522, 131066, 65526, 159, 131069, 65528, 655522, 131069, 65529, 655522, 131070, 65529, 655522, 131070, 65528, 655522, 131071, 65528, 655522, 131071, 65529, 655522, 65536, 65528, 655522, 131071, 65527, 655522, 65536, 65526, 655522, 65536, 65527, 655522, 131067, 65527, 655522, 131067, 65528, 655522, 131067, 65529, 655522, 131068, 65527, 655522, 131068, 65528, 655522, 131068, 65529, 655522, 131069, 65527, 655522, 131070, 65527, 655522, 131067, 65525, 1441954, 131068, 65525, 1441954, 131069, 65525, 1441954, 131070, 65525, 1441954, 131071, 65525, 1441954, 65529, 65531, 1441954, 65529, 65532, 1441954, 65529, 65533, 1441954, 65529, 65534, 1441954, 65529, 65535, 1441954, 65530, 65531, 1441954, 65530, 65532, 1441954, 65530, 65533, 1441954, 65530, 65534, 1441954, 65530, 65535, 1441954, 65531, 65531, 1441954, 65531, 65532, 1441954, 65531, 65533, 1441954, 65531, 65534, 1441954, 65531, 65535, 1441954, 65532, 65531, 1441954, 65532, 65532, 1441954, 65532, 65533, 1441954, 65532, 65534, 1441954, 65532, 65535, 1441954, 65533, 65531, 1441954, 65533, 65532, 1441954, 65533, 65533, 1441954, 65533, 65534, 1441954, 65533, 65535, 1441954, 65534, 65531, 1441954, 65534, 65532, 1441954, 65534, 65533, 1441954, 65534, 65534, 1441954, 65534, 65535, 1441954, 65535, 65531, 1441954, 65535, 65532, 1441954, 65535, 65533, 1441954, 65535, 65534, 1441954, 65535, 65535, 1441954, 131071, 65534, 162, 131070, 65534, 162, 131069, 65534, 162, 131069, 65533, 162, 131071, 65533, 162, 131070, 65533, 162, 131070, 65532, 162, 131069, 65532, 162, 131068, 65532, 162, 131069, 65531, 1441954, 131068, 65531, 1441954, 131071, 65532, 162, 131071, 65531, 159, 131070, 65531, 1441954, 131067, 65531, 1441954, 131066, 65531, 1441954, 131066, 65532, 1441954, 131066, 65533, 162, 131066, 65534, 162, 131067, 65534, 162, 131068, 65534, 162, 131067, 65533, 162, 131068, 65533, 162, 131067, 65532, 162, 65540, 65533, 1048735, 65540, 65532, 1048735, 65540, 65534, 1048735, 65540, 65535, 1048735, 65540, 0, 1048730, 65538, 0, 159, 65537, 65534, 1441954, 65537, 65533, 1441954, 65537, 65532, 1441954, 65537, 65531, 1441954, 3, 65534, 1048724, 3, 65533, 1048724, 3, 65532, 1048724, 65538, 65531, 1441954, 65538, 65532, 1441954, 65538, 65533, 1441954, 65538, 65534, 1441954, 65536, 65533, 1441951, 65536, 65532, 1441951, 65538, 65530, 655519, 65539, 65530, 655519, 65536, 65529, 655522, 131066, 65535, 162, 131067, 65535, 162, 131068, 65535, 162, 131069, 65535, 162, 131070, 65535, 162, 131071, 65535, 162, 65538, 65528, 655522, 65538, 65529, 655522, 65539, 65529, 655522, 65539, 65528, 655522, 65539, 65527, 655510, 65538, 65527, 655511, 65540, 65527, 655522, 65540, 65528, 655522, 65540, 65529, 655522, 65538, 65526, 1441942, 65537, 65526, 1441943, 65540, 65526, 655511, 65541, 65528, 655522, 65541, 65527, 655522, 65541, 65526, 655522)
+"cells": PackedInt32Array(131062, 65527, 655383, 131069, 65524, 1441816, 196605, 65524, 1441818, 65537, 65509, 17, 65553, 65523, 18, 65553, 65526, 18, 65553, 65529, 20, 65553, 65532, 22, 65552, 65514, 16, 65552, 65511, 16, 65552, 65508, 16, 65553, 65512, 51, 65552, 65516, 50, 65552, 65515, 50)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="city" type="GridMap" parent="."]
-mesh_library = ExtResource("4_p05bm")
-cell_size = Vector3(2, 1.1, 2)
-data = {
-"cells": PackedInt32Array(65538, 65533, 1048592, 65538, 65532, 1048593, 65538, 65531, 1048593, 65538, 65530, 1048593, 65538, 65529, 1441810)
-}
-metadata/_editor_floor_ = Vector3(0, 1, 0)
-
-[node name="jacobita" parent="." groups=["jacobita"] instance=ExtResource("5_x87rx")]
+[node name="jacobita" parent="." groups=["jacobita"] instance=ExtResource("5_e322a")]
 transform = Transform3D(-0.224271, 0, 0.974527, 0, 1, 0, -0.974527, 0, -0.224271, -3.16241, 1.73634, -1.46088)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="jacobita"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="jacobita"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00388837, 0.0651758, 0.00884438)
 shape = SubResource("SphereShape3D_x87rx")
 
-[node name="SpringArm3D2" type="SpringArm3D" parent="jacobita"]
+[node name="SpringArm3D" type="SpringArm3D" parent="jacobita"]
 transform = Transform3D(0.00119093, -1.68203e-05, 1.20341e-07, 2.15169e-05, 0.000928107, -1.33038e-05, 8.45961e-07, 7.30893e-05, 0.000168962, -0.050842, 0.204248, -0.530648)
 
-[node name="Camera3D" type="Camera3D" parent="jacobita/SpringArm3D2"]
+[node name="Camera3D" type="Camera3D" parent="jacobita/SpringArm3D"]
 transform = Transform3D(-799.706, 1.63672, -25.666, -1.4988e-05, 1039.29, 98.1486, 145.952, 442.951, -6946, 6.76758, -19.701, 317.811)
 fov = 77.5363
 
-[node name="vida" parent="jacobita" instance=ExtResource("6_vaqpk")]
+[node name="vida" parent="jacobita" instance=ExtResource("6_3f5tu")]
 transform = Transform3D(0.967413, 0, -0.253201, 0, 1, 0, 0.253201, 0, 0.967413, 0.0868523, 0.375669, 0.0665295)
 texture = SubResource("ViewportTexture_7bsjq")
 
@@ -133,7 +126,7 @@ mesh = SubResource("SphereMesh_p05bm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.86818, 1.97946, -2.52262)
 shape = SubResource("ConcavePolygonShape3D_2ccae")
 
-[node name="Main" parent="." instance=ExtResource("7_7bsjq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17433, 2.09585, -2.8133)
+[node name="Main" parent="." instance=ExtResource("7_0yb57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24378, 2.52979, -2.06737)
 
 [connection signal="no_hp_left" from="jacobita/vida" to="jacobita" method="_on_vida_no_hp_left"]
