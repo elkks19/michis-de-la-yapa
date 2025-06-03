@@ -7,20 +7,23 @@ extends CharacterBody3D
 @export var X_SENS: float = 1.0
 @export var Y_SENS: float = 1.0
 @export var LERP_VAL: float = 0.15
+@export var HEALTH: float = 100.0
+
 @onready var animation_player = $AnimationPlayer
-@onready var health_bar = get_node("/root/mapa/HUD/HealthBar")
 @onready var neck = $SpringArm3D
 @onready var camera = $SpringArm3D/Camera3D
+@onready var health_bar = $"../HUD/HealthBar"
+@onready var health_bar_text = $"../HUD/HealthBar/Label"
 
 var rotation_x = 0.0
 var rotation_y = 0.0
 var health := 100
 
+signal noah_hit
+
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if health_bar:
-		health_bar.max_value = 100
-		health_bar.value = health
+	health_bar.value = HEALTH
+	health_bar_text.text = str(HEALTH).pad_decimals(0)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -29,9 +32,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("noah_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	if Input.is_action_pressed("noah_camera_down"):
-		neck.rotation.x -= clamp(Y_SENS * delta, deg_to_rad(-30), deg_to_rad(60))
+		neck.rotation.x -= Y_SENS * delta
+		neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 	if Input.is_action_pressed("noah_camera_up"):
-		neck.rotation.x += clamp(Y_SENS * delta, deg_to_rad(-30), deg_to_rad(60))
+		neck.rotation.x += Y_SENS * delta
+		neck.rotation.x = clamp(neck.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 	if Input.is_action_pressed("noah_camera_left"):
 		global_rotation.y += X_SENS * delta
 	if Input.is_action_pressed("noah_camera_right"):
@@ -64,14 +69,17 @@ func _play_anim(anim_name: String):
 	if animation_player.current_animation != anim_name:
 		animation_player.play(anim_name)
 
-func hit(amount: int):
-	health -= amount
-	health = clamp(health, 0, 100)
-	if health_bar:
-		health_bar.value = health
-	if health <= 0:
+func hit(dir, damage):
+	emit_signal("noah_hit")
+	velocity += dir * KNOCKBACK_MULTIPLIER
+	HEALTH -= damage
+	HEALTH = clamp(HEALTH, 0, 100)
+	health_bar.value = HEALTH
+	health_bar_text.text = str(HEALTH).pad_decimals(0)
+	if HEALTH <= 0:
 		die()
 
 func die():
-	print("¡El jugador ha muerto!")
-	# Aquí podrías reproducir animación de muerte, reiniciar el nivel, etc.
+	health_bar_text.text = "MORISTE"
+	print("noah ha muerto!")
+	queue_free()

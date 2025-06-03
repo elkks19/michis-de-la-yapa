@@ -1,11 +1,14 @@
 extends Node3D
 
+@onready var jacobita_dmg = $personajes/Jacobita/jacobitaViewport/HUD/dmg
+@onready var noah_dmg = $personajes/noah/noahViewport/HUD/dmg
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_noah_hit():
+	noah_dmg.visible = true
+	await get_tree().create_timer(0.2).timeout
+	noah_dmg.visible = false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_jacobita_hit():
+	jacobita_dmg.visible = true
+	await get_tree().create_timer(0.2).timeout
+	jacobita_dmg.visible = false

@@ -7,18 +7,23 @@ extends CharacterBody3D
 @export var X_SENS: float = 0.05
 @export var Y_SENS: float = 0.05
 @export var LERP_VAL: float = 0.15
+@export var HEALTH: float = 100.0
 
 @onready var neck = $SpringArm3D
 @onready var camera = $SpringArm3D/Camera3D
 @onready var animation = $AnimationPlayer
 @onready var anim_tree = $AnimationTree
 @onready var model = $AuxScene/Skeleton3D/Cat
+@onready var health_bar = $"../HUD/HealthBar"
+@onready var health_bar_text = $"../HUD/HealthBar/Label"
 
-signal player_hit
+signal jacobita_hit
 var state_machine
 var direction
 
 func _ready():
+	health_bar.value = HEALTH
+	health_bar_text.text = str(HEALTH).pad_decimals(0)
 	state_machine = anim_tree.get("parameters/playback")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -69,6 +74,18 @@ func update_animations():
 	else:
 		state_machine.travel("Idle_A")
 
-func hit(dir):
-	emit_signal("player_hit")
+func hit(dir, damage):
+	emit_signal("jacobita_hit")
 	velocity += dir * KNOCKBACK_MULTIPLIER
+	HEALTH -= damage
+	HEALTH = clamp(HEALTH, 0, 100)
+	health_bar.value = HEALTH
+	health_bar_text.text = str(HEALTH).pad_decimals(0)
+	if HEALTH <= 0:
+		die()
+
+func die():
+	health_bar_text.text = "MORISTE"
+	print("jacobita ha muerto!")
+	queue_free()
+	

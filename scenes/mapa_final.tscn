@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c54baqn305vuo"]
+[gd_scene load_steps=15 format=3 uid="uid://c54baqn305vuo"]
 
 [ext_resource type="Script" uid="uid://ts50y5kcgagp" path="res://scripts/mapa_final.gd" id="1_i2o80"]
 [ext_resource type="PackedScene" uid="uid://dec8ecs321t4j" path="res://scenes/jacobita_final.tscn" id="2_i2o80"]
@@ -6,8 +6,7 @@
 [ext_resource type="Script" uid="uid://56fw0f2j5rw" path="res://scripts/noah_final.gd" id="5_5457s"]
 [ext_resource type="PackedScene" uid="uid://bkbddvh3m6lxs" path="res://scenes/noah_final.tscn" id="5_m5cq6"]
 [ext_resource type="PackedScene" uid="uid://cyd83ybevw2n8" path="res://scenes/vecindad.tscn" id="5_m8ib6"]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_4bplg"]
+[ext_resource type="PackedScene" uid="uid://dvlxosty2y07r" path="res://scenes/enemigo.tscn" id="6_5457s"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m8ib6"]
 sky_top_color = Color(0.74, 0.2886, 0.461637, 1)
@@ -37,11 +36,18 @@ volumetric_fog_length = 256.0
 volumetric_fog_detail_spread = 3.6
 volumetric_fog_sky_affect = 0.6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l2mu"]
+bg_color = Color(0.780392, 0.12549, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5457s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5457s"]
+bg_color = Color(0.780392, 0.12549, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0l2mu"]
+
 [node name="mapa_final" type="Node3D"]
 script = ExtResource("1_i2o80")
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-navigation_mesh = SubResource("NavigationMesh_4bplg")
 
 [node name="Environment" type="Node3D" parent="."]
 
@@ -78,7 +84,9 @@ size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="jacobita" parent="personajes/Jacobita/jacobitaViewport" instance=ExtResource("2_i2o80")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.496109, 0.928603, 0.0495224)
+transform = Transform3D(-0.160381, 0, -0.987055, 0, 1, 0, 0.987055, 0, -0.160381, -13.4097, 0.676919, 0.0495224)
+SPEED = 3.5
+KNOCKBACK_MULTIPLIER = 15.0
 
 [node name="SpringArm3D" type="SpringArm3D" parent="personajes/Jacobita/jacobitaViewport/jacobita"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33348, 0.398971)
@@ -86,6 +94,38 @@ spring_length = 0.5
 
 [node name="Camera3D" type="Camera3D" parent="personajes/Jacobita/jacobitaViewport/jacobita/SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 0.966806, 0.255513, 0, -0.255513, 0.966806, 0, 0, 0)
+
+[node name="HUD" type="CanvasLayer" parent="personajes/Jacobita/jacobitaViewport"]
+
+[node name="HealthBar" type="ProgressBar" parent="personajes/Jacobita/jacobitaViewport/HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -203.0
+offset_right = 203.0
+offset_bottom = 27.0
+grow_horizontal = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_0l2mu")
+show_percentage = false
+
+[node name="Label" type="Label" parent="personajes/Jacobita/jacobitaViewport/HUD/HealthBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_5457s")
+horizontal_alignment = 1
+
+[node name="dmg" type="ColorRect" parent="personajes/Jacobita/jacobitaViewport/HUD"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.64, 0.0576, 0.0576, 0.376471)
 
 [node name="noah" type="SubViewportContainer" parent="personajes"]
 layout_mode = 2
@@ -99,8 +139,12 @@ size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="Noah" parent="personajes/noah/noahViewport" instance=ExtResource("5_m5cq6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588503, -1.13298)
+transform = Transform3D(-0.40798, 0, -0.912991, 0, 1, 0, 0.912991, 0, -0.40798, -13.7009, 0.588503, -1.43833)
 script = ExtResource("5_5457s")
+SPEED = 3.5
+KNOCKBACK_MULTIPLIER = 15.0
+X_SENS = 2.0
+HEALTH = 100.0
 
 [node name="SpringArm3D" type="SpringArm3D" parent="personajes/noah/noahViewport/Noah"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439716, 0.551931)
@@ -110,7 +154,74 @@ margin = 0.5
 [node name="Camera3D" type="Camera3D" parent="personajes/noah/noahViewport/Noah/SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 0.851242, 0.524774, 0, -0.524774, 0.851242, 0, 0, -0.214012)
 
+[node name="HUD" type="CanvasLayer" parent="personajes/noah/noahViewport"]
+
+[node name="HealthBar" type="ProgressBar" parent="personajes/noah/noahViewport/HUD"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -203.0
+offset_right = 203.0
+offset_bottom = 27.0
+grow_horizontal = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_5457s")
+show_percentage = false
+
+[node name="Label" type="Label" parent="personajes/noah/noahViewport/HUD/HealthBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_0l2mu")
+horizontal_alignment = 1
+
+[node name="dmg" type="ColorRect" parent="personajes/noah/noahViewport/HUD"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.64, 0.0576, 0.0576, 0.376471)
+
 [node name="Enemigos" type="Node" parent="."]
+
+[node name="enemigo" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39236, -0.173673, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+
+[node name="enemigo2" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55592, 0.021775, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+
+[node name="enemigo3" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39236, -0.173673, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+
+[node name="enemigo4" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39236, -0.173673, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+
+[node name="enemigo5" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39236, -0.173673, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+
+[node name="enemigo6" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39236, -0.173673, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+
+[node name="enemigo7" parent="Enemigos" instance=ExtResource("6_5457s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39236, -0.173673, 0.688817)
+noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
+jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
 
 [node name="Mapa" type="Node" parent="."]
 
@@ -134,3 +245,6 @@ size = Vector3(4.07617, 4.62111, 0.659668)
 [node name="CSGBox3D3" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5644, 1.93365, -7.29735)
 size = Vector3(5.88559, 4.86731, 0.28833)
+
+[connection signal="jacobita_hit" from="personajes/Jacobita/jacobitaViewport/jacobita" to="." method="_on_jacobita_hit"]
+[connection signal="noah_hit" from="personajes/noah/noahViewport/Noah" to="." method="_on_noah_hit"]
