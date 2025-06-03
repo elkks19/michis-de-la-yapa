@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbhcdvntdrfx1"
-path.s3tc="res://.godot/imported/park-7200-30k-hdri-panoramas_5147_max-x1920.jpg-4b798b414033608c3f7a60cc3a99983c.s3tc.ctex"
+uid="uid://wet10x4t8pev"
+path.s3tc="res://.godot/imported/hdri_sky_842.jpg-e33a890d083529e654259371af44da54.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://park-7200-30k-hdri-panoramas_5147_max-x1920.jpg"
-dest_files=["res://.godot/imported/park-7200-30k-hdri-panoramas_5147_max-x1920.jpg-4b798b414033608c3f7a60cc3a99983c.s3tc.ctex"]
+source_file="res://assets/cielo/hdri_sky_842.jpg"
+dest_files=["res://.godot/imported/hdri_sky_842.jpg-e33a890d083529e654259371af44da54.s3tc.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b732tbomyalj3"]
 
-[ext_resource type="Texture2D" uid="uid://1wtidpdh7acx" path="res://fondocard.jpg" id="1_28uw7"]
-[ext_resource type="Texture2D" uid="uid://ddh7vgrdmursh" path="res://perro1.jpg" id="2_hd4u6"]
+[ext_resource type="Texture2D" uid="uid://1wtidpdh7acx" path="res://assets/carteles/fondocard.jpg" id="1_28uw7"]
+[ext_resource type="Texture2D" uid="uid://ddh7vgrdmursh" path="res://assets/carteles/perro1.jpg" id="2_hd4u6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnyrs"]
 resource_local_to_scene = true

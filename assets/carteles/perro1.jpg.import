@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqmss0yin2mt2"
-path.s3tc="res://.godot/imported/hdri_sky_759.jpg-fc893a5bc7c513fa4b7804c68752273c.s3tc.ctex"
+uid="uid://ddh7vgrdmursh"
+path.s3tc="res://.godot/imported/perro1.jpg-a9f153e2495cf8ec1869003bc5855954.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://hdri_sky_759.jpg"
-dest_files=["res://.godot/imported/hdri_sky_759.jpg-fc893a5bc7c513fa4b7804c68752273c.s3tc.ctex"]
+source_file="res://assets/carteles/perro1.jpg"
+dest_files=["res://.godot/imported/perro1.jpg-a9f153e2495cf8ec1869003bc5855954.s3tc.ctex"]
 
 [params]
 

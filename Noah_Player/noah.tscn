@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://c1pp40ga5p0g"]
 
-[ext_resource type="Texture2D" uid="uid://cuqbc6nsnalax" path="res://Noah_Player/Tex_Cat_B.png" id="1_624yw"]
+[ext_resource type="Texture2D" uid="uid://cuqbc6nsnalax" path="res://assets/noah/Tex_Cat_B.png" id="1_624yw"]
 [ext_resource type="Script" uid="uid://c4r3psffyj625" path="res://Noah_Player/noah.gd" id="1_fl61l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yixca"]

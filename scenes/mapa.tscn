@@ -133,7 +133,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="city" type="GridMap" parent="."]
+[node name="city2" type="GridMap" parent="."]
 mesh_library = ExtResource("4_6pxv8")
 cell_size = Vector3(2, 1.1, 2)
 data = {

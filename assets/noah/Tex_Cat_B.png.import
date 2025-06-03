@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1wtidpdh7acx"
-path.s3tc="res://.godot/imported/fondocard.jpg-c0f0e65c24b989f323cde9df8464ff33.s3tc.ctex"
+uid="uid://cuqbc6nsnalax"
+path.s3tc="res://.godot/imported/Tex_Cat_B.png-60da7c2509d819af5e26e2836b6e74a9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://fondocard.jpg"
-dest_files=["res://.godot/imported/fondocard.jpg-c0f0e65c24b989f323cde9df8464ff33.s3tc.ctex"]
+source_file="res://assets/noah/Tex_Cat_B.png"
+dest_files=["res://.godot/imported/Tex_Cat_B.png-60da7c2509d819af5e26e2836b6e74a9.s3tc.ctex"]
 
 [params]
 

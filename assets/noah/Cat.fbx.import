@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dcurcyd75ypl5"
-path="res://.godot/imported/Cat.fbx-48d483200f971c3616c309f6a91661c4.scn"
+path="res://.godot/imported/Cat.fbx-5b44d61e424bf07e581857c82325b10e.scn"
 
 [deps]
 
-source_file="res://Noah_Player/Cat.fbx"
-dest_files=["res://.godot/imported/Cat.fbx-48d483200f971c3616c309f6a91661c4.scn"]
+source_file="res://assets/noah/Cat.fbx"
+dest_files=["res://.godot/imported/Cat.fbx-5b44d61e424bf07e581857c82325b10e.scn"]
 
 [params]
 
