@@ -14,3 +14,4 @@ func _run() -> void:
 			body.add_child(col_shape, true)
 			body.owner = scene_root
 			col_shape.owner = scene_root
+	print('done')

@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c54baqn305vuo"]
+[gd_scene load_steps=11 format=3 uid="uid://c54baqn305vuo"]
 
 [ext_resource type="Script" uid="uid://ts50y5kcgagp" path="res://scripts/mapa_final.gd" id="1_i2o80"]
-[ext_resource type="Texture2D" uid="uid://bbxdsfvanubjc" path="res://materials/ground dirt/Ground_Dirt_009_BaseColor.jpg" id="1_tdf7e"]
 [ext_resource type="PackedScene" uid="uid://dec8ecs321t4j" path="res://scenes/jacobita_final.tscn" id="2_i2o80"]
-[ext_resource type="Texture2D" uid="uid://b6i15x2bnux8i" path="res://materials/ground dirt/Ground_Dirt_009_Normal.jpg" id="3_m8ib6"]
 [ext_resource type="Script" uid="uid://bf6grg68mpggn" path="res://scripts/jacobita_viewport.gd" id="4_m5cq6"]
+[ext_resource type="Script" uid="uid://56fw0f2j5rw" path="res://scripts/noah_final.gd" id="5_5457s"]
 [ext_resource type="PackedScene" uid="uid://bkbddvh3m6lxs" path="res://scenes/noah_final.tscn" id="5_m5cq6"]
+[ext_resource type="PackedScene" uid="uid://cyd83ybevw2n8" path="res://scenes/vecindad.tscn" id="5_m8ib6"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4bplg"]
 
@@ -37,12 +37,6 @@ volumetric_fog_length = 256.0
 volumetric_fog_detail_spread = 3.6
 volumetric_fog_sky_affect = 0.6
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tdf7e"]
-albedo_texture = ExtResource("1_tdf7e")
-normal_enabled = true
-normal_texture = ExtResource("3_m8ib6")
-uv1_triplanar = true
-
 [node name="mapa_final" type="Node3D"]
 script = ExtResource("1_i2o80")
 
@@ -62,12 +56,6 @@ shadow_enabled = true
 shadow_normal_bias = 3.0
 shadow_transmittance_bias = 0.0
 shadow_opacity = 0.5
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_tdf7e")
-use_collision = true
-size = Vector3(1000, 1, 1000)
 
 [node name="personajes" type="GridContainer" parent="."]
 anchors_preset = 15
@@ -90,13 +78,14 @@ size = Vector2i(574, 648)
 render_target_update_mode = 4
 
 [node name="jacobita" parent="personajes/Jacobita/jacobitaViewport" instance=ExtResource("2_i2o80")]
-transform = Transform3D(-0.966326, 0, -0.257318, 0, 1, 0, 0.257318, 0, -0.966326, 0.0138894, 0.992081, 0.43528)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.496109, 0.928603, 0.0495224)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="personajes/Jacobita/jacobitaViewport/jacobita"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0470977, 0.233059, -0.354766)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33348, 0.398971)
+spring_length = 0.5
 
 [node name="Camera3D" type="Camera3D" parent="personajes/Jacobita/jacobitaViewport/jacobita/SpringArm3D"]
-transform = Transform3D(-0.99924, -0.0136533, -0.0365283, -0.0213746, 0.975221, 0.220198, 0.0326167, 0.220812, -0.974772, -0.0401586, 0.229808, -0.2184)
+transform = Transform3D(1, 0, 0, 0, 0.966806, 0.255513, 0, -0.255513, 0.966806, 0, 0, 0)
 
 [node name="noah" type="SubViewportContainer" parent="personajes"]
 layout_mode = 2
@@ -111,11 +100,37 @@ render_target_update_mode = 4
 
 [node name="Noah" parent="personajes/noah/noahViewport" instance=ExtResource("5_m5cq6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588503, -1.13298)
+script = ExtResource("5_5457s")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="personajes/noah/noahViewport/Noah"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439716, 0.545058)
-spring_length = 2.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.439716, 0.551931)
+spring_length = 0.5
 margin = 0.5
 
 [node name="Camera3D" type="Camera3D" parent="personajes/noah/noahViewport/Noah/SpringArm3D"]
-transform = Transform3D(1, 0, 0, 0, 0.936035, 0.351907, 0, -0.351907, 0.936035, 0, 0, -0.214012)
+transform = Transform3D(1, 0, 0, 0, 0.851242, 0.524774, 0, -0.524774, 0.851242, 0, 0, -0.214012)
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Mapa" type="Node" parent="."]
+
+[node name="vecindad" parent="Mapa" instance=ExtResource("5_m8ib6")]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Mapa"]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.88052, 2.09467, 9.69367)
+size = Vector3(0.60498, 4.33826, 18.901)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mapa/CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107219, -0.0241594, -18.02)
+size = Vector3(0.60498, 4.48456, 11.8709)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0527, 1.96877, 18.8036)
+size = Vector3(4.07617, 4.62111, 0.659668)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5644, 1.93365, -7.29735)
+size = Vector3(5.88559, 4.86731, 0.28833)
