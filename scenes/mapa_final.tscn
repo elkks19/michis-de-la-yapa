@@ -96,7 +96,7 @@ transform = Transform3D(-0.966326, 0, -0.257318, 0, 1, 0, 0.257318, 0, -0.966326
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0470977, 0.233059, -0.354766)
 
 [node name="Camera3D" type="Camera3D" parent="personajes/Jacobita/jacobitaViewport/jacobita/SpringArm3D"]
-transform = Transform3D(-0.999438, 0.00183694, -0.0335055, -0.0036379, 0.986684, 0.16261, 0.0333581, 0.16264, -0.986122, -0.0421034, 0.170763, -0.0112115)
+transform = Transform3D(-0.99924, -0.0136533, -0.0365283, -0.0213746, 0.975221, 0.220198, 0.0326167, 0.220812, -0.974772, -0.0401586, 0.229808, -0.2184)
 
 [node name="noah" type="SubViewportContainer" parent="personajes"]
 layout_mode = 2
