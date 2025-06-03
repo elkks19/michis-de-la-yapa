@@ -11,5 +11,8 @@ func _unhandled_input(event):
 		mouseEvent.position = get_global_transform_with_canvas().affine_inverse() * event.position
 		vw.push_input(mouseEvent)
 
+	elif event is InputEventMouseButton:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		vw.push_input(event)
 	else:
 		vw.push_input(event)

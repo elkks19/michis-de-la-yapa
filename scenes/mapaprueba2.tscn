@@ -6,7 +6,7 @@
 [ext_resource type="MeshLibrary" uid="uid://c5gcq3wcfexlo" path="res://assets/mallas/city kit.tres" id="4_weplb"]
 [ext_resource type="PackedScene" uid="uid://b4b08lx8fbum2" path="res://scenes/jacobitaPlayer.tscn" id="5_e322a"]
 [ext_resource type="PackedScene" uid="uid://bbxdgh82myuuy" path="res://scenes/vida.tscn" id="6_3f5tu"]
-[ext_resource type="PackedScene" uid="uid://b732tbomyalj3" path="res://scenes/main.tscn" id="7_0yb57"]
+[ext_resource type="PackedScene" uid="uid://b732tbomyalj3" path="res://scenes/cartel.tscn" id="7_0yb57"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rpin2"]
 resource_local_to_scene = true
