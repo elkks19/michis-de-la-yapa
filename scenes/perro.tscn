@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvjapanl2m8b6"]
+
+[ext_resource type="PackedScene" uid="uid://cgda6w1qrxuy7" path="res://assets/perro/JaulaPerro.glb" id="1_6wdif"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_86yjq"]
+size = Vector3(0.53186, 0.50708, 0.509705)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="perro enjaulado" parent="." instance=ExtResource("1_6wdif")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.437201, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="perro enjaulado"]
+transform = Transform3D(39.4862, 0, 0, 0, 39.4862, 0, 0, 0, 39.4862, 1.03391, 8.32429, 0.806159)
+shape = SubResource("BoxShape3D_86yjq")

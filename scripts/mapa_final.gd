@@ -2,6 +2,11 @@ extends Node3D
 
 @onready var jacobita_dmg = $personajes/Jacobita/jacobitaViewport/HUD/dmg
 @onready var noah_dmg = $personajes/noah/noahViewport/HUD/dmg
+#@onready var audio = $Environment/AudioStreamPlayer
+
+func _ready():
+	#audio.play()
+	pass
 
 func _on_noah_hit():
 	noah_dmg.visible = true

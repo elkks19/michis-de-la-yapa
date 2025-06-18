@@ -101,7 +101,7 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 [node name="jacobita" parent="." groups=["jacobita"] instance=ExtResource("5_e322a")]
 transform = Transform3D(-0.224271, 0, 0.974527, 0, 1, 0, -0.974527, 0, -0.224271, -3.16241, 1.73634, -1.46088)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="jacobita"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="jacobita"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00388837, 0.0651758, 0.00884438)
 shape = SubResource("SphereShape3D_x87rx")
 

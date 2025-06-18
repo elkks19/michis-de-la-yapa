@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c54baqn305vuo"]
+[gd_scene load_steps=20 format=3 uid="uid://c54baqn305vuo"]
 
 [ext_resource type="Script" uid="uid://ts50y5kcgagp" path="res://scripts/mapa_final.gd" id="1_i2o80"]
 [ext_resource type="PackedScene" uid="uid://dec8ecs321t4j" path="res://scenes/jacobita_final.tscn" id="2_i2o80"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cyd83ybevw2n8" path="res://scenes/vecindad.tscn" id="5_m8ib6"]
 [ext_resource type="PackedScene" uid="uid://dvlxosty2y07r" path="res://scenes/enemigo.tscn" id="6_5457s"]
 [ext_resource type="PackedScene" uid="uid://b732tbomyalj3" path="res://scenes/cartel.tscn" id="7_0l2mu"]
+[ext_resource type="PackedScene" uid="uid://cvjapanl2m8b6" path="res://scenes/perro.tscn" id="9_7hxbt"]
+[ext_resource type="MeshLibrary" uid="uid://kopgob85gijm" path="res://assets/mallas/road tiles.tres" id="9_33un2"]
+[ext_resource type="MeshLibrary" uid="uid://c5gcq3wcfexlo" path="res://assets/mallas/city kit.tres" id="10_x33eg"]
+[ext_resource type="MeshLibrary" uid="uid://kxtet32131rm" path="res://assets/mallas/building blocks.tres" id="11_r4dxu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m8ib6"]
 sky_top_color = Color(0.74, 0.2886, 0.461637, 1)
@@ -193,66 +197,73 @@ color = Color(0.64, 0.0576, 0.0576, 0.376471)
 transform = Transform3D(0.714705, 0, 0.699426, 0, 1, 0, -0.699426, 0, 0.714705, 4.38694, 0.510363, 0.992628)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo2" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(-0.0296488, 0, 0.99956, 0, 1, 0, -0.99956, 0, -0.0296488, -1.40476, 0.554993, -1.26515)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo3" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(0.069739, 0, -0.997565, 0, 1, 0, 0.997565, 0, 0.069739, 3.65362, 0.572036, 0.688817)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo4" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(0.86254, 0, 0.505989, 0, 1, 0, -0.505989, 0, 0.86254, 2.87218, 0.633179, 0.696348)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
-
-[node name="enemigo5" parent="Enemigos" instance=ExtResource("6_5457s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85657, 0.633179, 0.688817)
-noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
-jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo6" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(-0.999941, 0, -0.0108906, 0, 1, 0, 0.0108906, 0, -0.999941, 3.98736, 0.633179, -0.0473723)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo7" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(-0.271877, 0, 0.962332, 0, 1, 0, -0.962332, 0, -0.271877, 4.47809, 0.633179, 0.208991)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo8" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(0.714705, 0, 0.699426, 0, 1, 0, -0.699426, 0, 0.714705, 17.4216, 0.510363, -2.2366)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo9" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(0.069739, 0, -0.997565, 0, 1, 0, 0.997565, 0, 0.069739, 16.6882, 0.572036, -2.54041)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo10" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(0.86254, 0, 0.505989, 0, 1, 0, -0.505989, 0, 0.86254, 15.9068, 0.633179, -2.53288)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo11" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8912, 0.633179, -2.54041)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo12" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(-0.999941, 0, -0.0108906, 0, 1, 0, 0.0108906, 0, -0.999941, 17.022, 0.633179, -3.2766)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="enemigo13" parent="Enemigos" instance=ExtResource("6_5457s")]
 transform = Transform3D(-0.271877, 0, 0.962332, 0, 1, 0, -0.962332, 0, -0.271877, 17.5127, 0.633179, -3.02024)
 noah_path = NodePath("../../personajes/noah/noahViewport/Noah")
 jacobita_path = NodePath("../../personajes/Jacobita/jacobitaViewport/jacobita")
+VIEW_RANGE = 4.0
 
 [node name="Main" parent="Enemigos" instance=ExtResource("7_0l2mu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.87335, 0.961492, -2.44701)
@@ -264,21 +275,58 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.87335, 0.961492, -2.44701)
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="Mapa"]
 use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.88052, 2.09467, 9.69367)
-size = Vector3(0.60498, 4.33826, 18.901)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="Mapa/CSGCombiner3D/CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107219, -0.0241594, -18.02)
-size = Vector3(0.60498, 4.48456, 11.8709)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0527, 1.96877, 18.8036)
-size = Vector3(4.07617, 4.62111, 0.659668)
-
 [node name="CSGBox3D3" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5644, 1.93365, -7.29735)
 size = Vector3(5.88559, 4.86731, 0.28833)
+
+[node name="road" type="GridMap" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54235, -1.47907, 42.6661)
+mesh_library = ExtResource("9_33un2")
+cell_size = Vector3(3, 1, 3)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PackedInt32Array(65535, 172, 1442066, 65535, 175, 1442066, 65535, 169, 1442066, 131066, 0, 159, 131067, 0, 159, 131068, 0, 159, 131069, 0, 159, 131070, 0, 159, 131071, 0, 159, 65536, 0, 165, 65537, 0, 159, 3, 65535, 1048724, 65535, 65535, 1441954, 131071, 65534, 162, 131070, 65532, 162, 65540, 65534, 1048735, 65540, 65535, 1048735, 65540, 0, 1048730, 65538, 0, 159, 65539, 65532, 1048738, 65539, 65528, 1441951, 65539, 65527, 1441951, 65539, 65526, 1441951, 65539, 65525, 1441951, 65539, 65524, 1441957, 131066, 65535, 655519, 131065, 65535, 655519, 131063, 65535, 655519, 131064, 65535, 655519, 131062, 65535, 655519, 65538, 65534, 157, 65539, 65534, 655522, 65538, 65533, 162, 65539, 65533, 1048738, 65537, 65532, 162, 65538, 65532, 655522, 65540, 65533, 1048735, 65540, 65532, 1048735, 65536, 65534, 162, 65537, 65533, 162, 65537, 65531, 162, 65537, 65535, 162, 65537, 65534, 162, 65537, 65529, 0, 65538, 65528, 1048734, 65537, 65528, 162, 65537, 65527, 162, 65538, 65527, 1441958, 65537, 65526, 162, 65538, 65526, 1441804, 65538, 65525, 1441954, 65537, 65525, 162, 65536, 65525, 162, 65536, 65526, 162, 65536, 65527, 162, 65536, 65528, 162, 65536, 65529, 162, 65536, 65530, 162, 65536, 65531, 162, 65536, 65532, 162, 65536, 65533, 162, 65536, 65535, 162, 131071, 65533, 162, 131071, 65532, 162, 131071, 65531, 162, 65538, 65529, 1048576, 65537, 65530, 0, 131074, 65528, 19, 196607, 65529, 19, 196607, 65531, 19, 65540, 65531, 159, 65539, 65531, 165, 65539, 65530, 1048576, 65540, 65530, 1048735, 65539, 65529, 1048734, 65538, 65524, 1441954, 65541, 65530, 1048726, 65542, 65530, 1048715, 65543, 65530, 1048715, 65542, 65531, 159, 65545, 65530, 655590, 65541, 65531, 159, 65541, 65532, 655522, 65541, 65533, 655522, 65541, 65534, 655522, 65541, 65535, 655522, 65542, 65535, 655522, 65542, 65534, 655522, 65543, 65534, 655522, 65543, 65533, 655375, 65542, 65532, 655522, 65543, 65532, 655522, 65543, 65535, 173, 65543, 0, 173, 65542, 0, 162, 65543, 65531, 655522, 131077, 65534, 655379, 131076, 65531, 655378, 131076, 65533, 655378, 131074, 65531, 655378, 65542, 65533, 655381, 65544, 65533, 1048750, 65544, 65531, 1048762, 65544, 65534, 1048750, 65544, 65535, 655641, 65544, 65532, 1048750, 65545, 65531, 655522, 65545, 65532, 655522, 65545, 65533, 655522, 65545, 65534, 655522, 65545, 65535, 655522, 65546, 65531, 655522, 65546, 65532, 655522, 65546, 65533, 655522, 65546, 65534, 655522, 65546, 65535, 655522, 65546, 65530, 655519, 131081, 65531, 655379, 131081, 65532, 655379, 131081, 65533, 655379, 131081, 65534, 655379, 131081, 65535, 655379, 65544, 65530, 162, 65544, 65529, 162, 65544, 65528, 162, 65544, 65527, 162, 65542, 65528, 162, 65541, 65529, 162, 65540, 65529, 162, 65542, 65529, 162, 65542, 65527, 162, 65542, 65526, 1048738, 65541, 65526, 162, 65540, 65526, 162, 65540, 65527, 162, 65538, 65531, 162, 65540, 65528, 162, 65541, 65528, 162, 65541, 65527, 162, 65545, 65529, 1441954, 65543, 65529, 1441966, 65543, 65528, 1441966, 65543, 65527, 1441966, 65543, 65526, 1441966, 65545, 65528, 1441954, 65545, 65527, 1441954, 65545, 65526, 1441954, 65545, 65525, 1441954, 65543, 65525, 1441959, 65544, 65525, 1441954, 65542, 65525, 1441954, 65541, 65524, 655519, 65542, 65524, 655519, 65543, 65524, 655519, 65544, 65524, 655519, 65545, 65524, 655519, 65546, 65524, 655519, 131081, 65529, 655379, 131081, 65528, 655379, 131081, 65527, 655379, 131081, 65526, 655379, 4, 65531, 51, 5, 65531, 51)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="city" type="GridMap" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99939, -1.68471, 42.9238)
+mesh_library = ExtResource("10_x33eg")
+cell_size = Vector3(2, 1.1, 2)
+data = {
+"cells": PackedInt32Array(65538, 65533, 1048592, 65538, 65532, 1048593, 65538, 65531, 1048593, 65538, 65530, 1048593, 65538, 65529, 1441810, 65538, 65534, 655383, 131071, 65526, 1441814, 131071, 65525, 1441814, 131071, 65524, 1441814, 65536, 65527, 655381, 65536, 65523, 21, 131071, 65523, 23, 131071, 65527, 23, 131070, 65525, 23, 131070, 65523, 23, 65538, 65523, 23, 65537, 65529, 23, 65541, 65528, 655370, 65542, 65528, 655364, 65543, 65528, 655372, 65544, 65528, 655383, 65540, 65525, 16, 65540, 65524, 16, 65540, 65523, 16, 65540, 65522, 16, 65540, 65521, 16, 65540, 65519, 23, 65540, 65520, 23, 65540, 65526, 23, 65537, 65527, 23, 65546, 65521, 1048598, 65546, 65522, 1048598, 65546, 65525, 1048597)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="build blocks" type="GridMap" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99939, -1.68471, 42.9238)
+mesh_library = ExtResource("11_r4dxu")
+cell_size = Vector3(1, 1.24, 1)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+cell_scale = 1.5
+data = {
+"cells": PackedInt32Array(131062, 65527, 655383, 131069, 65524, 1441816, 196605, 65524, 1441818, 65537, 65509, 17, 65553, 65523, 18, 65553, 65526, 18, 65553, 65529, 20, 65553, 65532, 22, 65552, 65514, 16, 65552, 65511, 16, 65552, 65508, 16, 65553, 65512, 51, 65552, 65516, 50, 65552, 65515, 50)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 5.94393, 0, 0, 0, 10.9035, -6.20408, 1.6686, -8.00834)
+size = Vector3(0.339355, 0.859863, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 5.94393, 0, 0, 0, 10.9035, -6.20408, 1.6686, 3.65379)
+size = Vector3(0.339355, 0.859863, 0.640991)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Mapa/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 10.9035, 0, 5.94393, 0, -1, 0, -4.76606e-07, 8.71795, 1.6686, 6.68939)
+size = Vector3(0.339355, 0.859863, 2.72394)
+
+[node name="Node3D" parent="." instance=ExtResource("9_7hxbt")]
+transform = Transform3D(-0.0909763, 0, -7.9534e-09, 0, 0.0909763, 0, 7.9534e-09, 0, -0.0909763, 17.6614, 0, 0)
 
 [connection signal="jacobita_hit" from="personajes/Jacobita/jacobitaViewport/jacobita" to="." method="_on_jacobita_hit"]
 [connection signal="noah_hit" from="personajes/noah/noahViewport/Noah" to="." method="_on_noah_hit"]

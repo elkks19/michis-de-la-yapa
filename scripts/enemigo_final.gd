@@ -18,6 +18,7 @@ var state_machine
 @onready var area = $Area3D
 @onready var area_collision = $Area3D/CollisionShape3D
 
+
 func _ready():
 	#area_collision.radius = VIEW_RANGE
 	noah = get_node(noah_path)
